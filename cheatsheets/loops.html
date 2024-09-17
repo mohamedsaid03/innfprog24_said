@@ -6,7 +6,11 @@
     <title>Loops cheat sheet</title>
 </head>
 <body>
-    
+    <h1>Regn ut summen av alle tall mellom <span id="start"> X </span> og <span id="stopp"> Y </span></h1>
+    <p id="utregning"></p>
+    <h1>Vis alle tall som er delelig på <span id="deltall"> Z </span> mellom <span id="delstart"> X </span> og <span id="delstopp"> Y </span></h1>
+    <p id="delresultater"></p>
+
 
     <script>
         /*
@@ -25,6 +29,36 @@
         console.log("jeg kjører fortsatt:" + whileteller)
         whileteller++
        } 
+
+       //utregning av alle tall mellom X og Y
+       const x = 1
+       const y = 50
+       let sum = 0
+
+       document.getElementById("start").innerHTML = x
+       document.getElementById("stopp").innerHTML = y
+
+       for(let teller = x; teller <= y; teller++) {
+        sum += teller
+        if(teller===y){
+            document.getElementById("utregning").innerHTML += teller + "=" + sum
+        } else{
+             document.getElementById("utregning").innerHTML += teller + " + "
+        }
+      }
+
+      //Vis heltall somer delelige på Z
+      const z= 7
+
+      document.getElementById("delstart").innerHTML = x
+      document.getElementById("delstopp").innerHTML = y
+      document.getElementById("deltall").innerHTML = z
+
+      for(let teller = x; teller <= y; teller++){
+        if(teller % z === 0) {
+            document.getElementById("delresultater").innerHTML += teller + ", "
+        }
+      }
     </script>
 </body>
 </html>
