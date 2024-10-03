@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 50px;
+        }
+        button{
+            font-size: 40px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .green{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="knapp" class="green">Trykk på meg</button>
+
+    <script>
+        document.addEventListener("mousemove", function(event) {
+            console. log(event)
+        })
+        const knapp = document.getElementById("knapp")
+        // Endre tekst og farge på knapp når musepekeren er over knappen 
+        knapp.addEventListener("mouseover", function()) {
+            knapp.classList.add("red")
+            knapp.classList.remove("green")
+            
+        }
+        document.getElementById("knapp").addEventListener("mouseover", function() {
+            document.getElementById("knapp").innerHTML = "neeei, ikke trykk på meg!"
+        })
+    </script>
+</body>
+</html>

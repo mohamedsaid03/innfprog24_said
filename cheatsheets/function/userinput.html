@@ -8,18 +8,18 @@
 <body>
     <h>Regn ut din alder</h>
     <p>
-    <lapel for="birthyear">Ditt fødselår</lapel>
+    <label for="birthyear">Ditt fødselår</label>
     <input id="birthyear" type="number" />
     </p>
     <p>
         <label for="year">År for utregning</label>
         <input id="year" type="number" />
     </p>
-    <p><button onclick="ageCalculator()"</button></p>
+    <p><button onclick="ageCalculator"></button></p>
     <p id="agesentence"></p>
 
     <script>
-        function ageCalculator(birthyear = "2003", year = "2024") {
+        function ageCalculator() {
             //Hente årstall fra inputs:
             const birthyear = document.getElementById("birthyear").value
             const year = document.getElementById("year").value
